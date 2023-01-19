@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LΛZIC.</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/knight.png" rel="icon">
+  <link href="assets/img/knight.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://formsubmit.co/el/limoxo">
+  <!-- Google Fonts -->
+  
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizLand - v3.10.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  
+
+  <!-- ======= Hero Section ======= -->
+  
+  <section id="hero" class="d-flex align-items-center">
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/img/premium-rule.mp4" type="video/mp4">
+    </video>
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to the <span>REAL WORLD</span>, Neo</h1>
+       <h2>Our profession is <span class="typed-text" style="color: #106eea;"></span><span class="cursor">&nbsp;</span></h2>
+       <h2 style="font-size: 35px;">The choice is yours</h2>
+      <div class="d-flex">
+        <a href="#about" class="btn-get-started scrollto">Join Network</a>
+        <a href="https://www.youtube.com" class="btn-watch-video"><i class="fab fa-youtube" style="color: #e2062c;"></i><span>Go watch Youtube</span></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <script>
+    const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["the creation of modern wealth", "teaching profitable skills", "creating a network of successful people"];
+const typingDelay = 30;
+const erasingDelay = 10;
+const newTextDelay = 1500; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+  </script>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+        <!--<i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i> -->
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <span>Powered by #LCINC team</span>
+        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 400; font-size: 40px;"><img src="assets/img/knight.png" style="margin-bottom: 10px;"><b></b><span><b>LΛZIC</b></span>.</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="terms-of-use.html">Terms of Use</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li class="dropdown"><a href="#"><span>Lazic Company INC</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Updates</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="https://www.google.com/maps/place/Lazic+Company+INC/@42.8953844,20.8650014,15z/data=!4m5!3m4!1s0x0:0x10c94e30198458bb!8m2!3d42.8953844!4d20.8650014">Directions</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Lazic Media Group</a></li>
+              <li><a href="https://www.google.com/maps?ll=44.808361,20.449972&z=13&t=m&hl=en&gl=RS&mapclient=embed">Directions</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title" style="margin-top: 4vh;margin-bottom: 5vh;">
+          <h2>About</h2>
+          <h3 style="font-size:45px ;">Find Out More <span>About Us</span></h3>
+          <p style="font-size: 20px;">We are a global community of like-minded individuals striving to acquire an abundance of wealth.</p>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/36760104797e708da7d1d43076868915.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>JOIN THE NETWORK OF AMBITIOUS MEN</h3>
+            <p class="fst-italic" style="font-size: 24px;">
+              Your net worth is derived from your network. You must surround yourself with successful men, men that you can emulate.
+            </p>
+            
+            <p style="font-size: 24px;">
+              Society is influencing you for the benefit of society as a whole. They don't want you to be free, they want slaves who work, consume and die.
+               We will explain the truth about life, and we will teach you valuable skills that will assist you in escaping the matrix.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 15vh;">
+          
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>TIME TO START SHINING</h3>
+            
+            <p style="font-size: 24px;">
+              Our teachers instruct valuable skills like trading, e-commerce, copywriting, freelancing, etc.
+            , many things that will be useful in escaping The Matrix. </p>
+              <p style="font-size: 24px;">Our purpose is to unite ambitious minds ready to learn from the best, 
+              reach financial freedom, and escape The Matrix once and for all.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/7d4c4b85290d936bd638d45a1f8c9997.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+
+
+        <div class="section-title" style="margin-top: 4vh;margin-bottom: 5vh;">
+          <h2>Skills</h2>
+          <h3 style="font-size:45px ;">Skills You Can  <span>Learn With Us</span></h3>
+          <p style="font-size: 20px;">With our help and your persistence, you can learn the mentioned skills and turn them into money.</p>
+        </div>
+
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Crypto <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Ecommerce <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WEB DESIGN <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Amazon FBA <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Stocks <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Freelancing <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Finance <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Copywriting <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Artificial Intelligence <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Mindset <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+
+        <div class="section-title" style="margin-top: 4vh;margin-bottom: 5vh;">
+          <h2>association</h2>
+          <h3 style="font-size:45px ;">Our <span>Partners </span>and <span>Members</span></h3>
+          <p style="font-size: 20px;">Number of significant terms of our organization.</p>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Current Members</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Staff</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+   
+
+
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <h3>Our Hardworking <span>Team</span></h3>
+          <p>Faces are blurred to maintain anonymity. You can contact the team on discord, we often use it for work</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-11.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a ><i class="bi bi-discord"> </i></a>
+                  <span style="background-color:rgba(16, 110, 234, 0.8); padding:8px; border-radius:7px;">Milutinac#2760</span>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>M. Lazic</h4>
+                <span>Founder & CEO | #LCINCteam</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a ><i class="bi bi-discord"> </i></a>
+                  <span style="background-color:rgba(16, 110, 234, 0.8); padding:8px; border-radius:7px;">𝓙𝓸𝓿𝓪𝓷𝓪#5845</span>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>J. Popov</h4>
+                <span>Chief Marketing Officer | #LCINCteam</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-33.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a ><i class="bi bi-discord"></i></a>
+                  <span style="background-color:rgba(16, 110, 234, 0.8); padding:8px; border-radius:7px;">Stefke#1744</span>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>S. Nikolic</h4>
+                <span>Chief technology officer | #LCINCteam</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-44.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a ><i class="bi bi-discord"></i></a>
+                  <span style="background-color:rgba(16, 110, 234, 0.8); padding:8px; border-radius:7px;">Аничица#2078</span>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>A. Radonjic</h4>
+                <span>Accountant | #LCINCteam</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <h3>Check our <span>Pricing</span></h3>
+          <p>Read our privacy policy and terms and conditions before making purchases. When you make a purchase, we assume that you have read it. Thanks for understanding!</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Free</h3>
+              <h4><sup>€</sup>0.00<span> / month</span></h4>
+              <ul>
+                <li>Discord community</li>
+                <li class="na">Member cooperation</li>
+                <li class="na">24/7 support</li>
+                <li class="na">Involvement in projects</li>
+                <li class="na">Business classes (5)</li>
+                <li class="na">Classes of profitable skills (20)</li>
+                <li class="na">Collaboration with the outside world<br>(entrepreneurs, companies...)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Business</h3>
+              <h4><sup>€</sup>19.99<span> / month</span></h4>
+              <ul>
+                <li>Discord community</li>
+                <li>Member cooperation</li>
+                <li>24/7 support</li>
+                <li class="na">Involvement in projects</li>
+                <li class="na">Business classes (5)</li>
+                <li class="na">Classes of profitable skills (20)</li>
+                <li class="na">Collaboration with the outside world<br>(entrepreneurs, companies...)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Standard pack</h3>
+              <h4><sup>€</sup>129.99<span> / month</span></h4>
+              <ul>
+                <li>Discord community</li>
+                <li>Member cooperation</li>
+                <li>24/7 support</li>
+                <li>Involvement in projects</li>
+                <li>Business classes (5)</li>
+                <li>Classes of profitable skills (20)</li>
+                <li class="na">Collaboration with the outside world<br>(entrepreneurs, companies...)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <span class="advanced">Advanced</span>
+              <h3>Ultimate pack</h3>
+              <h4><sup>€</sup>229.99<span> / month</span></h4>
+              <ul>
+                <li>Discord community</li>
+                <li>Member cooperation</li>
+                <li>24/7 support</li>
+                <li>Involvement in projects</li>
+                <li>Business classes (5)</li>
+                <li>Classes of profitable skills (20)</li>
+                <li>Collaboration with the outside world<br>(entrepreneurs, companies...)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>F.A.Q</h2>
+          <h3>Frequently Asked <span>Questions</span></h3>
+          
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <ul class="faq-list">
+
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">When will I receive my Digital Products? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Upon confirmation of payment you will immediately recieve a receipt, the digital product access will be sent to you via email within 24 hours of payment confirmation. If you have any inquiries feel free to reach out to the livechat agent here on the site.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">How long will Delivery Take? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Deliveries are usually dispatched same day when ordering within business hours. Please, however, allow 2 to 5 days for delivery of your products.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Payment types that won't work <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    You can't add these payment methods to Google Pay:<br>
+                
+                  - Wire transfers<br>
+                  - Bank transfers<br>
+                  - Western Union<br>
+                  - Moneygram<br>
+                  - Virtual credit cards (VCC)<br>
+                  - Health savings account (HSA)<br>
+                  - Any escrow type of payment<br>
+                  - Prepaid cards if you use automatic payments<br>
+                
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Your transaction cannot be completed <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    If you see this error message, wait 24 hours and try to add your card again.</p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">How long it usually takes to send or receive money? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    For the best Google Pay experience, we recommend using a debit card whenever you send or receive money from friends and family. With a debit card, sending and receiving money is usually the fastest option.</p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">how does the platform work? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    The platform accepts members and connects them with professors in order to learn a skill that would be useful for them to earn money. Learning from the professor is optional, and members can collaborate with other members immediately upon entering. </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Need a help? Feel free to reach us anytime</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Hercegovačka 14, Beograd</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22645.185729774556!2d20.43245850800873!3d44.80835741804061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b4f5c9a4054cdc0!2zNDTCsDQ4JzMwLjEiTiAyMMKwMjYnNTkuOSJF!5e0!3m2!1sen!2srs!4v1673717196940!5m2!1sen!2srs" frameborder="0" style="border:0; width: 100%; height: 384px;filter: invert(90%) hue-rotate(180deg)" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="https://formsubmit.co/marecaryt@gmail.com" method="POST" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="textarea" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="textarea" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" name="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p style="color: #777777;">Subscribe to our newsletter to receive offers, news or updates from the platform</p>
+            <form action="https://formsubmit.co/marecaryt@gmail.com" method="POST">
+              <input type="email" name="email" required><input type="submit" name="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3><img src="assets/img/knight.png" style="height: 25px; margin-bottom: 7px;"><span style="margin-left: 1px;">LΛZIC</span>.</h3>
+            <p>
+             
+              
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Pricing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="terms-of-use.html">Terms of Use</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lazic Company INC</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lazic Media Group</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.google.com/maps?ll=44.808361,20.449972&z=13&t=m&hl=en&gl=RS&mapclient=embed">Directions</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Wake up Neo...</h4>
+            <p>The Matrix has you</p>
+            <p>Resist</p>
+            <p>Don't be a slave</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright 2023 All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Powered by <a href="https://bootstrapmade.com/">Lazic Company INC</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
